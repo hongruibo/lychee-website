@@ -11,7 +11,7 @@ export function ContactPanel({
 }: ContactPanelProps) {
   return (
     <section className="section-frame">
-      <div className="grid gap-8 rounded-[2rem] border border-black/8 bg-white px-6 py-10 md:px-10 md:py-12 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="grid gap-8 rounded-[2rem] border border-black/8 bg-white/78 px-6 py-10 backdrop-blur-[8px] md:px-10 md:py-12 lg:grid-cols-[0.92fr_1.08fr]">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
             Contact
@@ -31,12 +31,12 @@ export function ContactPanel({
         <div className="grid gap-4">
           {[
             {
-              title: "Calendly placeholder",
+              title: "Book an intro",
               detail: "Reserve time for an introductory conversation.",
               href: calendlyUrl,
             },
             {
-              title: "Email placeholder",
+              title: "Email",
               detail: founderEmail,
               href: `mailto:${founderEmail}`,
             },

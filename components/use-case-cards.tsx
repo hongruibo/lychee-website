@@ -22,7 +22,7 @@ export function UseCaseCards({
 
       <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {useCaseCards.map((item) => (
-          <article key={item.title} className="rounded-[1.75rem] border border-black/8 bg-white p-6">
+          <article key={item.title} className="rounded-[1.75rem] border border-black/8 bg-white/78 p-6 backdrop-blur-[6px]">
             <h3 className="text-xl font-semibold tracking-[-0.03em] text-[color:var(--ink)]">
               {item.title}
             </h3>

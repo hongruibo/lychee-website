@@ -1,56 +1,54 @@
 import Link from "next/link";
 
 import {
+  calendlyUrl,
   companyTagline,
-  founderEmail,
   linkedInUrl,
   navLinks,
 } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-black/8 bg-white">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1.5fr_1fr_1fr] lg:px-10">
-        <div className="max-w-sm space-y-4">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--ink)]">
-            Lychee Labs
-          </p>
-          <p className="text-sm leading-6 text-[color:var(--muted)]">
+    <footer className="site-footer border-t border-black/8 bg-white/88 backdrop-blur-[8px]">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-14 lg:px-10">
+        <div className="footer-top border-b border-black/6 pb-8">
+          <p className="footer-tagline max-w-2xl text-base leading-7 text-[color:var(--muted)] md:text-lg">
             {companyTagline}.
           </p>
         </div>
 
-        <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-            Navigation
-          </p>
-          <div className="grid gap-3 text-sm text-[color:var(--muted)]">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-[color:var(--ink)]">
-                {link.label}
-              </Link>
-            ))}
+        <div className="footer-grid grid gap-10 py-10 md:grid-cols-2 lg:max-w-3xl">
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+              Company
+            </h4>
+            <div className="mt-4 grid gap-3 text-sm text-[color:var(--muted)]">
+              {navLinks.slice(0, 3).map((link) => (
+                <Link key={link.href} href={link.href} className="hover:text-[color:var(--ink)]">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-            Contact
-          </p>
-          <div className="grid gap-3 text-sm text-[color:var(--muted)]">
-            <a href={`mailto:${founderEmail}`} className="hover:text-[color:var(--ink)]">
-              {founderEmail}
-            </a>
-            <a href={linkedInUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
-              Linda Hong Cheng on LinkedIn
-            </a>
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+              Contact
+            </h4>
+            <div className="mt-4 grid gap-3 text-sm text-[color:var(--muted)]">
+              <a href={calendlyUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
+                Book an intro
+              </a>
+              <a href={linkedInUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 border-t border-black/6 px-6 py-5 text-xs text-[color:var(--muted)] lg:px-10">
-        <p>&copy; {new Date().getFullYear()} Lychee Labs</p>
-        <p>Mission-critical industrial intelligence.</p>
+      <div className="footer-bottom mx-auto flex w-full max-w-7xl items-center justify-between gap-4 border-t border-black/6 px-6 py-5 text-xs text-[color:var(--muted)] lg:px-10">
+        <span>&copy; 2026 Lychee Labs</span>
       </div>
     </footer>
   );
