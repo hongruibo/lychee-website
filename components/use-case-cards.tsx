@@ -11,7 +11,7 @@ type UseCaseCardsProps = {
 export function UseCaseCards({
   title = "Where teams use Lychee Labs",
   eyebrow = "Use cases",
-  label = "Initial workflows for battery and energy manufacturing teams",
+  label = "Core workflows for battery manufacturing and adjacent energy systems",
 }: UseCaseCardsProps) {
   return (
     <section className="section-frame">

@@ -20,28 +20,28 @@ export const navLinks = [
 
 export const proofChips = [
   "Built for mission-critical manufacturing environments",
-  "Starting in battery and energy manufacturing",
-  "Focused on defect risk and diagnosis acceleration",
+  "Built for battery manufacturing, with broader energy relevance",
+  "Focused on earlier defect visibility and faster diagnosis",
   "Designed for fragmented industrial data",
 ];
 
 export const economicStats = [
   {
     value: "70-80%",
-    label: "Scrap rates cited during early ramp-up",
-    href: "https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/battery-2030-resilient-sustainable-and-circular",
+    label: "Scrap can reach this level during early battery-factory ramp-up.",
+    href: "https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/battery-2035-building-new-advantages?utm_source=chatgpt.com",
     source: "McKinsey",
   },
   {
     value: "$4M/day",
-    label: "Lost-production impact cited at 50 GWh scale",
-    href: "https://www.mckinsey.com.br/capabilities/operations/our-insights/power-spike-how-battery-makers-can-respond-to-surging-demand-from-evs",
+    label: "Approximate immediate cost impact of lost production at 50 GWh scale.",
+    href: "https://www.mckinsey.com/capabilities/operations/our-insights/power-spike-how-battery-makers-can-respond-to-surging-demand-from-evs?utm_source=chatgpt.com",
     source: "McKinsey",
   },
   {
-    value: "£21M+/yr",
-    label: "Value cited from 1% yield improvement at 20 GWh",
-    href: "https://www.bindt.org/News/march-2023/waygate-technologies-and-its-partners-among-winners-of-faraday-battery-challenge-funding-competition-in-the-united-kingdom/",
+    value: "£21M+/year",
+    label: "Potential annual value of a 1% yield improvement at 20 GWh scale.",
+    href: "https://www.bindt.org/News/march-2023/waygate-technologies-and-its-partners-among-winners-of-faraday-battery-challenge-funding-competition-in-the-united-kingdom/?utm_source=chatgpt.com",
     source: "BINDT / UKRI",
   },
 ];
@@ -51,7 +51,7 @@ export const steps = [
     step: "01",
     title: "Ingest fragmented manufacturing context",
     description:
-      "Bring together process history, machine events, quality outcomes, and inspection signals that usually live in separate systems and separate moments in time.",
+      "Bring together process history, machine events, quality outcomes, and inspection signals that usually live in disconnected systems and disconnected moments in time.",
   },
   {
     step: "02",
@@ -63,13 +63,13 @@ export const steps = [
     step: "03",
     title: "Prioritize likely upstream drivers",
     description:
-      "Narrow the search space around likely upstream contributors so engineering teams can move faster from symptom to plausible cause.",
+      "Narrow the search space around likely upstream contributors so engineering teams can move faster from symptom to likely cause.",
   },
   {
     step: "04",
     title: "Support faster stabilization",
     description:
-      "Help manufacturing teams intervene sooner, learn faster, and recover yield and process stability with less diagnostic drag.",
+      "Help manufacturing teams intervene sooner, learn faster, and recover yield and process stability with less diagnostic delay.",
   },
 ];
 
@@ -77,7 +77,7 @@ export const useCaseCards = [
   {
     title: "Defect risk prediction",
     description:
-      "Highlight elevated defect risk earlier from fragmented process and quality history before later-stage failure visibility compounds the cost.",
+      "Surface elevated defect risk earlier from fragmented process and quality history before later-stage failure visibility compounds the cost.",
   },
   {
     title: "Diagnosis acceleration",
@@ -108,9 +108,9 @@ export const whyLychee = [
       "Battery operations rarely suffer from a lack of data. They suffer from delayed, disconnected, and hard-to-use manufacturing context.",
   },
   {
-    title: "Battery-first wedge, broader industrial-intelligence mission",
+    title: "Built for battery manufacturing, relevant wherever delay is expensive",
     description:
-      "Lychee Labs starts where the economic consequences are already severe, while building toward a larger industrial-intelligence layer for advanced manufacturing.",
+      "Lychee Labs is built for battery manufacturing, where delayed discovery is especially costly, and where earlier visibility can protect yield, throughput, and revenue.",
   },
 ];
 
@@ -198,23 +198,23 @@ export const detailedUseCases = [
 export const sourceLinks = [
   {
     label: "McKinsey battery ramp-up context",
-    href: "https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/battery-2030-resilient-sustainable-and-circular",
+    href: "https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/battery-2035-building-new-advantages?utm_source=chatgpt.com",
   },
   {
     label: "McKinsey on lost production economics",
-    href: "https://www.mckinsey.com.br/capabilities/operations/our-insights/power-spike-how-battery-makers-can-respond-to-surging-demand-from-evs",
+    href: "https://www.mckinsey.com/capabilities/operations/our-insights/power-spike-how-battery-makers-can-respond-to-surging-demand-from-evs?utm_source=chatgpt.com",
   },
   {
     label: "BINDT / UKRI on yield-improvement value",
-    href: "https://www.bindt.org/News/march-2023/waygate-technologies-and-its-partners-among-winners-of-faraday-battery-challenge-funding-competition-in-the-united-kingdom/",
+    href: "https://www.bindt.org/News/march-2023/waygate-technologies-and-its-partners-among-winners-of-faraday-battery-challenge-funding-competition-in-the-united-kingdom/?utm_source=chatgpt.com",
   },
 ];
 
 export const founderPreview =
-  "Linda Hong Cheng leads Lychee Labs’ ML systems, product vision, and commercial strategy, with a background spanning applied machine learning, research leadership, and high-stakes technical storytelling.";
+  "Linda Hong Cheng is the founder and CEO of Lychee Labs. A BBC-featured AI founder, former AI PhD, Clarendon Scholar at Oxford, and AI research fellow at Columbia, she leads the company’s ML systems, product vision, and commercial strategy.";
 
 export const aboutPreview =
-  "Lychee Labs is building industrial intelligence for mission-critical advanced manufacturing, starting with battery and energy manufacturing. Its first product helps industrial teams detect defect risk earlier, accelerate diagnosis, and reduce waste from delayed discovery.";
+  "Lychee Labs builds industrial intelligence for mission-critical manufacturing, with an initial focus on battery and energy environments where delayed discovery is especially expensive. The platform helps industrial teams detect defect risk earlier, accelerate diagnosis, and reduce waste, lost output, and revenue leakage.";
 
 export const teamIntro =
   "Lychee Labs brings together applied machine learning, battery-materials expertise, and rapid engineering execution to build the intelligence layer for high-stakes manufacturing environments.";

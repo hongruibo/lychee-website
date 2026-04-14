@@ -14,16 +14,13 @@ export function ProblemSection() {
             Battery teams often discover problems after millions have already been lost
           </h2>
           <p className="max-w-3xl text-pretty text-base leading-8 text-[color:var(--muted)] md:text-lg">
-            In battery manufacturing, process drift can begin upstream while defects only become visible much later, after additional material, labor, and cycle time have already been consumed. At factory scale, that delay becomes a multimillion-dollar operating problem.
-          </p>
-          <p className="max-w-3xl text-pretty text-base leading-8 text-[color:var(--muted)] md:text-lg">
-            Lychee Labs helps teams surface defect risk earlier from fragmented process and quality data, so they can investigate sooner, intervene faster, and reduce the cost of delayed discovery.
+            In battery manufacturing, process drift can begin upstream while defects only become visible much later, after more material, labor, and cycle time have already been consumed. At factory scale, that delay becomes a multimillion-dollar revenue and margin problem. Lychee Labs helps teams surface defect risk earlier from fragmented process and quality data, so they can investigate sooner, intervene earlier, and reduce scrap, rework, and lost output before value is destroyed.
           </p>
         </div>
 
         <aside className="stat-callouts rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-6 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
-            Operating context
+            Economic stakes
           </p>
           <div className="mt-6 grid gap-4">
             {economicStats.map((stat) => (
@@ -47,9 +44,9 @@ export function ProblemSection() {
             ))}
           </div>
 
-          <div className="mt-6 border-t border-black/6 pt-5">
+          <div className="mt-6 border-t border-[color:var(--line)] pt-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-              Source links
+              Supporting sources
             </p>
             <div className="mt-3 grid gap-2 text-sm text-[color:var(--muted)]">
               {sourceLinks.map((source) => (

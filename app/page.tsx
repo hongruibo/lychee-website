@@ -39,6 +39,7 @@ export default function HomePage() {
         <SectionIntro
           eyebrow="Teams"
           title="For manufacturing, process, and quality teams"
+          body="Designed for industrial teams responsible for yield, throughput, stability, and diagnosis speed."
         />
         <div className="mt-8 flex flex-wrap gap-3">
           {teamRoles.map((role) => (
@@ -54,10 +55,10 @@ export default function HomePage() {
 
       <section className="section-frame">
         <div className="grid gap-8 rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-10 md:px-10 md:py-12 lg:grid-cols-[0.95fr_1.05fr]">
-          <SectionIntro eyebrow="About Lychee Labs" title="Industrial intelligence, starting where delayed discovery is expensive" body={aboutPreview} />
+          <SectionIntro eyebrow="About Lychee Labs" title="Industrial intelligence for manufacturing environments where delay destroys value" body={aboutPreview} />
           <div className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
-              Founder preview
+              Founder
             </p>
             <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[color:var(--ink)]">
               <a
@@ -74,7 +75,7 @@ export default function HomePage() {
               href="/about"
               className="mt-6 inline-flex items-center text-sm font-medium text-[color:var(--ink)]"
             >
-              See company background
+              See founder and company background
             </Link>
           </div>
         </div>

@@ -14,23 +14,23 @@ export function HeroSection() {
             Early-warning software for battery manufacturing
           </h1>
           <p className="mx-auto max-w-[760px] text-pretty text-[1.15rem] leading-8 text-[color:var(--muted)] md:text-[1.35rem]">
-            Lychee Labs helps battery manufacturing teams use fragmented process and quality data to predict defect risk earlier, accelerate root-cause investigation, and stabilize production faster.
+            Lychee Labs helps battery manufacturing teams use fragmented process and quality data to predict defect risk earlier, accelerate root-cause investigation, and protect yield, throughput, and revenue.
           </p>
           <p className="mx-auto max-w-[720px] text-pretty text-base leading-7 text-[color:var(--muted)] md:text-lg">
-            Built for battery manufacturing environments where delayed discovery can destroy millions in value before the root cause is even clear.
+            Built for battery manufacturing environments where delayed discovery can destroy millions in value before the root cause is clear.
           </p>
           <div className="hero-actions flex flex-wrap items-center justify-center gap-6 pt-2">
             <a
               href={calendlyUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               Book an intro
             </a>
             <Link
               href="/use-cases"
-              className="inline-flex items-center text-sm font-medium text-[color:var(--ink)] underline-offset-4 transition-colors duration-200 hover:text-[color:var(--accent-strong)] hover:underline"
+              className="inline-flex items-center text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--ink)] underline-offset-4 transition-colors duration-200 hover:text-[color:var(--accent-strong)] hover:underline"
             >
               See use cases
             </Link>
@@ -40,7 +40,7 @@ export function HeroSection() {
         <div className="hero-visual relative mx-auto min-h-[24rem] w-full max-w-[1120px] overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(53,91,129,0.08),transparent_22%),radial-gradient(circle_at_80%_25%,rgba(41,89,129,0.08),transparent_20%),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:auto,auto,92px_92px,92px_92px]" />
           <div className="absolute left-6 top-6 rounded-full border border-[color:var(--line)] bg-[color:var(--surface-alt)] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)] md:left-8 md:top-8">
-            Battery-first wedge
+            Battery manufacturing
           </div>
 
           <div className="absolute inset-x-6 bottom-6 top-20 md:inset-x-8 md:bottom-8 md:top-24">
@@ -56,17 +56,17 @@ export function HeroSection() {
               <div className="absolute left-[36%] top-[43%] h-px w-[18%] -rotate-[18deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.3))]" />
               <div className="absolute left-[52%] top-[40%] h-px w-[22%] rotate-[12deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.32))]" />
 
-              <div className="absolute bottom-5 left-5 right-5 grid gap-3 md:grid-cols-3">
+              <div className="absolute bottom-5 left-5 right-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                 {[
-                  ["Process topology", "Upstream-to-downstream context"],
-                  ["Signal paths", "Fragmented history made legible"],
-                  ["Quality nodes", "Earlier action before delayed loss"],
-                ].map(([title, detail]) => (
-                  <div key={title} className="rounded-[1.25rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-4 py-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-                      {title}
-                    </p>
-                    <p className="mt-2 text-sm text-[color:var(--ink)]">{detail}</p>
+                  "Process context",
+                  "Upstream-to-downstream traceability",
+                  "Connected signals",
+                  "Unified process history",
+                  "Quality outcomes",
+                  "Earlier action, lower loss",
+                ].map((label) => (
+                  <div key={label} className="rounded-[1.25rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-4 py-4">
+                    <p className="text-sm font-medium text-[color:var(--ink)]">{label}</p>
                   </div>
                 ))}
               </div>
