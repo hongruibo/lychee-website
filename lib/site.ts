@@ -1,12 +1,14 @@
 export const SITE_LINKS = {
   calendly: "https://calendly.com/linda-lycheelabs",
   founderLinkedIn: "https://linkedin.com/in/lindahongcheng",
+  companyLinkedIn: "https://linkedin.com/company/lychee-labs",
 };
 
 export const founderName = "Linda Hong Cheng";
-export const founderEmail = "founder@lycheelabs.io";
+export const founderEmail = "hello@lycheelabs.io";
 export const calendlyUrl = SITE_LINKS.calendly;
 export const linkedInUrl = SITE_LINKS.founderLinkedIn;
+export const companyLinkedInUrl = SITE_LINKS.companyLinkedIn;
 export const companyTagline = "Industrial intelligence for mission-critical manufacturing";
 
 export const navLinks = [

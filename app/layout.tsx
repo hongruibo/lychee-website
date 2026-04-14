@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   },
   description:
     "Lychee Labs builds industrial intelligence for mission-critical advanced manufacturing, starting with battery and energy manufacturing.",
+  icons: {
+    icon: "/logo/logo-black-white.jpeg",
+    shortcut: "/logo/logo-black-white.jpeg",
+    apple: "/logo/logo-black-white.jpeg",
+  },
 };
 
 export default function RootLayout({

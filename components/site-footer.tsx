@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import {
   calendlyUrl,
+  companyLinkedInUrl,
   companyTagline,
-  linkedInUrl,
   navLinks,
 } from "@/lib/site";
 
@@ -12,9 +13,25 @@ export function SiteFooter() {
     <footer className="site-footer border-t border-black/8 bg-white/88 backdrop-blur-[8px]">
       <div className="mx-auto w-full max-w-7xl px-6 pt-14 lg:px-10">
         <div className="footer-top border-b border-black/6 pb-8">
-          <p className="footer-tagline max-w-2xl text-base leading-7 text-[color:var(--muted)] md:text-lg">
-            {companyTagline}.
-          </p>
+          <div className="flex items-center gap-4">
+            <span className="overflow-hidden rounded-full border border-black/8 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <Image
+                src="/logo/logo-black-white.jpeg"
+                alt="Lychee Labs logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-cover"
+              />
+            </span>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--ink)]">
+                Lychee Labs
+              </p>
+              <p className="footer-tagline mt-2 max-w-2xl text-base leading-7 text-[color:var(--muted)] md:text-lg">
+                {companyTagline}.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="footer-grid grid gap-10 py-10 md:grid-cols-2 lg:max-w-3xl">
@@ -39,7 +56,7 @@ export function SiteFooter() {
               <a href={calendlyUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
                 Book an intro
               </a>
-              <a href={linkedInUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
+              <a href={companyLinkedInUrl} target="_blank" rel="noreferrer" className="hover:text-[color:var(--ink)]">
                 LinkedIn
               </a>
             </div>
