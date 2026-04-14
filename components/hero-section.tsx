@@ -24,7 +24,7 @@ export function HeroSection() {
               href={calendlyUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               Book an intro
             </a>
