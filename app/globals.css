@@ -31,6 +31,19 @@ body {
   min-height: 100vh;
 }
 
+@media (pointer: fine) {
+  .cursor-effects-enabled,
+  .cursor-effects-enabled body,
+  .cursor-effects-enabled a,
+  .cursor-effects-enabled button,
+  .cursor-effects-enabled summary,
+  .cursor-effects-enabled input,
+  .cursor-effects-enabled textarea,
+  .cursor-effects-enabled select {
+    cursor: none !important;
+  }
+}
+
 a {
   text-decoration: none;
 }
