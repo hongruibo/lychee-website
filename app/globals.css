@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f5f6f2;
+  --surface: #ffffff;
+  --surface-alt: #eef1eb;
+  --ink: #121817;
+  --muted: #586260;
+  --accent: #2f7462;
+  --accent-strong: #215c4c;
+  --accent-soft: rgba(47, 116, 98, 0.2);
+  --font-sans: "Avenir Next", Aptos, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(47, 116, 98, 0.18);
+}
+
+.section-frame {
+  @apply mx-auto w-full max-w-7xl px-6 py-8 lg:px-10 lg:py-10;
+}
+
+.panel-shell {
+  @apply rounded-[2rem] border border-black/8 bg-white shadow-[0_1px_0_rgba(15,23,42,0.04)];
+}
