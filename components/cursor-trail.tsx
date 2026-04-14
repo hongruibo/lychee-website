@@ -41,6 +41,7 @@ function createStreak(x: number, y: number, dx: number, dy: number, intensity = 
 
 export function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -51,8 +52,9 @@ export function CursorTrail() {
     }
 
     const canvas = canvasRef.current;
+    const cursor = cursorRef.current;
 
-    if (!canvas) {
+    if (!canvas || !cursor) {
       return;
     }
 
@@ -64,6 +66,8 @@ export function CursorTrail() {
 
     const streaks: Streak[] = [];
     const pointer = {
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
       targetX: window.innerWidth / 2,
       targetY: window.innerHeight / 2,
       visible: false,
@@ -111,6 +115,11 @@ export function CursorTrail() {
         context.stroke();
       });
 
+      pointer.x += (pointer.targetX - pointer.x) * 0.18;
+      pointer.y += (pointer.targetY - pointer.y) * 0.18;
+      cursor.style.transform = `translate3d(${pointer.x + 14}px, ${pointer.y + 10}px, 0) translate(-50%, -50%)`;
+      cursor.style.opacity = pointer.visible ? "0.92" : "0";
+
       rafId = window.requestAnimationFrame(draw);
     };
 
@@ -118,11 +127,6 @@ export function CursorTrail() {
       const interactiveTarget = event.target instanceof Element
         ? event.target.closest("a, button, summary, input, textarea, select, label")
         : null;
-
-      if (interactiveTarget) {
-        pointer.visible = false;
-        return;
-      }
 
       const now = performance.now();
       const dx = event.clientX - pointer.targetX;
@@ -132,7 +136,11 @@ export function CursorTrail() {
       pointer.vy = dy;
       pointer.targetX = event.clientX;
       pointer.targetY = event.clientY;
-      pointer.visible = true;
+      pointer.visible = !interactiveTarget;
+
+      if (interactiveTarget) {
+        return;
+      }
 
       if (now - lastMoveAt > 12) {
         streaks.push(createStreak(event.clientX, event.clientY, dx, dy));
@@ -181,10 +189,32 @@ export function CursorTrail() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-[30] hidden md:block"
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-[40] hidden md:block"
+      />
+      <div
+        ref={cursorRef}
+        aria-hidden="true"
+        className="pointer-events-none fixed left-0 top-0 z-[41] hidden h-[18px] w-[18px] overflow-hidden rounded-full border border-white/10 bg-black/88 opacity-0 shadow-[0_4px_12px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
+      >
+        <img
+          src="/logo/logo-white-black.jpeg"
+          alt=""
+          width={18}
+          height={18}
+          className="logo-for-dark h-full w-full object-cover"
+        />
+        <img
+          src="/logo/logo-black-white.jpeg"
+          alt=""
+          width={18}
+          height={18}
+          className="logo-for-light absolute inset-0 hidden h-full w-full object-cover"
+        />
+      </div>
+    </>
   );
 }

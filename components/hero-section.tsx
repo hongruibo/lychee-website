@@ -14,7 +14,7 @@ export function HeroSection() {
             Early-warning software for battery manufacturing
           </h1>
           <p className="mx-auto max-w-[760px] text-pretty text-[1.15rem] leading-8 text-[color:var(--muted)] md:text-[1.35rem]">
-            Lychee Labs helps battery manufacturing teams use fragmented process and quality data to predict defect risk earlier, accelerate root-cause investigation, and protect yield, throughput, and revenue.
+            Lychee Labs helps battery manufacturing teams predict defect risk earlier and accelerate root-cause investigation - increasing yield, throughput, and revenue.
           </p>
           <p className="mx-auto max-w-[720px] text-pretty text-base leading-7 text-[color:var(--muted)] md:text-lg">
             Built for battery manufacturing environments where delayed discovery can destroy millions in value before the root cause is clear.

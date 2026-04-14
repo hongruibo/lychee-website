@@ -17,7 +17,7 @@ export default function UseCasesPage() {
       <PageHero
         eyebrow="Use cases"
         title="Use cases for battery manufacturing teams"
-        description="Initial workflows focus on earlier defect visibility, faster diagnosis, and better operating context in battery manufacturing environments."
+        description="These workflows focus on earlier defect visibility, faster diagnosis, and better operating context in battery manufacturing environments."
       />
 
       <section className="section-frame">
@@ -63,8 +63,8 @@ export default function UseCasesPage() {
       </section>
 
       <CTASection
-        title="The first workflows are battery-specific. The operating logic is broader."
-        body="Lychee Labs starts with battery manufacturing because the economic penalty for delayed visibility is already severe."
+        title="These workflows are built for battery manufacturing teams where delayed visibility is expensive."
+        body="The same operating logic matters wherever fragmented process and quality data slow diagnosis, stabilization, and recovery."
         ctaLabel="Book an intro"
         ctaHref="/contact"
       />

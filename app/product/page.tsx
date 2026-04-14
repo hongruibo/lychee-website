@@ -39,7 +39,7 @@ export default function ProductPage() {
           <SectionIntro
             eyebrow="Built for action, not just analytics"
             title="Earlier visibility only matters if it changes the operating response"
-            body="The product wedge is not generic analytics. It is earlier warning and faster investigation in battery manufacturing settings where delayed discovery increases material loss, engineering drag, and operating exposure."
+            body="This is not generic analytics. It is earlier warning and faster investigation in battery manufacturing settings where delayed discovery increases material loss, engineering drag, and operating exposure."
           />
 
           <div className="grid gap-4 md:grid-cols-2">

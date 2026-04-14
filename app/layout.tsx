@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Lychee Labs",
   },
   description:
-    "Lychee Labs builds industrial intelligence for mission-critical advanced manufacturing, starting with battery and energy manufacturing.",
+    "Lychee Labs builds industrial intelligence for mission-critical manufacturing, with an initial focus on battery and energy manufacturing.",
   icons: {
     icon: "/logo/logo-white-black.jpeg",
     shortcut: "/logo/logo-white-black.jpeg",
@@ -56,7 +56,7 @@ export default function RootLayout({
         <div className="app-background pointer-events-none fixed inset-0 -z-20" />
         <div className="app-grid pointer-events-none fixed inset-0 -z-10" />
         <SiteHeader />
-        <main id="main-content" className="pb-16">
+        <main id="main-content" className="pb-16 pt-24 md:pt-28">
           {children}
         </main>
         <SiteFooter />

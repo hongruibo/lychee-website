@@ -9,7 +9,7 @@ import { aboutPreview } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Lychee Labs is building industrial intelligence for mission-critical advanced manufacturing, starting with battery and energy manufacturing.",
+    "Lychee Labs builds industrial intelligence for mission-critical manufacturing, with an initial focus on battery and energy environments.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Industrial intelligence for mission-critical advanced manufacturing"
-        description="Lychee Labs is building industrial intelligence for mission-critical advanced manufacturing, with battery and energy manufacturing as the initial beachhead."
+        description="Lychee Labs is building industrial intelligence for mission-critical advanced manufacturing, with an initial focus on battery and energy manufacturing."
       />
 
       <section className="section-frame">
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Mission"
               title="Earlier visibility is economically material"
-              body="Lychee Labs exists because signal in complex manufacturing is often fragmented, delayed, and too hard to act on in time. Battery and energy manufacturing are the initial beachhead because the operating penalty for delayed discovery is already severe. The company mission is broader: build the industrial-intelligence layer for high-stakes advanced manufacturing systems where earlier visibility changes operating outcomes."
+              body="Lychee Labs exists because signal in complex manufacturing is often fragmented, delayed, and too hard to act on in time. In battery and energy manufacturing, earlier visibility is economically material: it can help reduce waste, lost output, and margin erosion before problems compound. The company is building the intelligence layer for high-stakes manufacturing environments where delay destroys value."
             />
           </div>
           <div className="rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-7 md:p-10">
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Lychee Labs is building the control-layer view that complex manufacturing often lacks."
-        body="The company starts with battery and energy manufacturing because the need is immediate, the economics are concrete, and the product wedge is commercially legible."
+        body="The company is focused on battery and energy manufacturing because the need is immediate, the economics are concrete, and earlier visibility can change operating outcomes."
         ctaLabel="Get in touch"
         ctaHref="/contact"
       />
