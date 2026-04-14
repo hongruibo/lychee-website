@@ -23,14 +23,14 @@ export default function AboutPage() {
 
       <section className="section-frame">
         <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[2rem] border border-black/8 bg-white p-7 md:p-10">
+          <div className="rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-7 md:p-10">
             <SectionIntro
               eyebrow="Mission"
               title="Earlier visibility is economically material"
               body="Lychee Labs exists because signal in complex manufacturing is often fragmented, delayed, and too hard to act on in time. Battery and energy manufacturing are the initial beachhead because the operating penalty for delayed discovery is already severe. The company mission is broader: build the industrial-intelligence layer for high-stakes advanced manufacturing systems where earlier visibility changes operating outcomes."
             />
           </div>
-          <div className="rounded-[2rem] border border-black/8 bg-[color:var(--surface-alt)] p-7 md:p-10">
+          <div className="rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-7 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
               Current focus
             </p>

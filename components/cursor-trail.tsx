@@ -194,12 +194,17 @@ export function CursorTrail() {
       <div
         ref={cursorRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-[1201] hidden h-8 w-8 overflow-hidden rounded-full border border-black/10 bg-black opacity-0 shadow-[0_8px_24px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[1201] hidden h-8 w-8 overflow-hidden rounded-full border border-[color:var(--line-strong)] bg-black opacity-0 shadow-[0_8px_24px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
       >
         <img
           src="/logo/logo-white-black.jpeg"
           alt=""
-          className="h-full w-full object-cover"
+          className="logo-for-dark h-full w-full object-cover"
+        />
+        <img
+          src="/logo/logo-black-white.jpeg"
+          alt=""
+          className="logo-for-light absolute inset-0 hidden h-full w-full object-cover"
         />
       </div>
     </>

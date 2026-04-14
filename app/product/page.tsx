@@ -24,7 +24,7 @@ export default function ProductPage() {
         <SectionIntro eyebrow="Product pillars" title="Built around the actual operating problem" />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {productPillars.map((pillar) => (
-            <article key={pillar.title} className="rounded-[1.75rem] border border-black/8 bg-white p-6">
+            <article key={pillar.title} className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6">
               <h2 className="text-xl font-semibold tracking-[-0.03em] text-[color:var(--ink)]">
                 {pillar.title}
               </h2>
@@ -35,7 +35,7 @@ export default function ProductPage() {
       </section>
 
       <section className="section-frame">
-        <div className="grid gap-8 rounded-[2rem] border border-black/8 bg-white px-6 py-10 md:px-10 md:py-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-8 rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-10 md:px-10 md:py-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionIntro
             eyebrow="Built for action, not just analytics"
             title="Earlier visibility only matters if it changes the operating response"
@@ -44,7 +44,7 @@ export default function ProductPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             {actionOutcomes.map((item) => (
-              <article key={item.title} className="rounded-[1.5rem] border border-black/8 bg-[color:var(--surface-alt)] p-5">
+              <article key={item.title} className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-5">
                 <h3 className="text-lg font-semibold tracking-[-0.03em] text-[color:var(--ink)]">
                   {item.title}
                 </h3>
@@ -69,7 +69,7 @@ export default function ProductPage() {
               href={stat.href}
               target="_blank"
               rel="noreferrer"
-              className="rounded-[1.75rem] border border-black/8 bg-white p-6 hover:border-[color:var(--accent-soft)]"
+              className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6 hover:border-[color:var(--accent-soft)]"
             >
               <p className="text-3xl font-semibold tracking-[-0.05em] text-[color:var(--ink)]">{stat.value}</p>
               <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{stat.label}</p>

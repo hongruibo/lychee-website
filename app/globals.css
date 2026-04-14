@@ -1,16 +1,41 @@
 @import "tailwindcss";
 
 :root {
+  --canvas: #0b0f11;
+  --surface: rgba(17, 22, 24, 0.76);
+  --surface-strong: #111619;
+  --surface-alt: rgba(23, 30, 34, 0.88);
+  --surface-soft: rgba(31, 39, 44, 0.7);
+  --ink: #edf2f1;
+  --muted: #9ba8ae;
+  --accent: #8faecb;
+  --accent-strong: #bfd4e6;
+  --accent-soft: rgba(143, 174, 203, 0.22);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --line-subtle: rgba(255, 255, 255, 0.06);
+  --shadow-soft: 0 20px 70px rgba(0, 0, 0, 0.28);
+  --shadow-strong: 0 30px 90px rgba(0, 0, 0, 0.34);
+  --font-sans: "SF Pro Display", "Avenir Next", Aptos, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+html[data-theme="light"] {
   --canvas: #f4f4f0;
-  --surface: #ffffff;
-  --surface-alt: #ecefea;
+  --surface: rgba(255, 255, 255, 0.76);
+  --surface-strong: #ffffff;
+  --surface-alt: rgba(236, 239, 234, 0.9);
+  --surface-soft: rgba(255, 255, 255, 0.68);
   --ink: #101516;
   --muted: #5c6669;
   --accent: #295981;
   --accent-strong: #1d486c;
   --accent-soft: rgba(41, 89, 129, 0.18);
-  --font-sans: "SF Pro Display", "Avenir Next", Aptos, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  --line: rgba(16, 21, 22, 0.09);
+  --line-strong: rgba(16, 21, 22, 0.14);
+  --line-subtle: rgba(16, 21, 22, 0.05);
+  --shadow-soft: 0 20px 70px rgba(15, 23, 42, 0.06);
+  --shadow-strong: 0 30px 90px rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
@@ -49,7 +74,7 @@ a {
 }
 
 ::selection {
-  background: rgba(47, 116, 98, 0.18);
+  background: var(--accent-soft);
 }
 
 .section-frame {
@@ -57,5 +82,53 @@ a {
 }
 
 .panel-shell {
-  @apply rounded-[2rem] border border-black/8 bg-white shadow-[0_1px_0_rgba(15,23,42,0.04)];
+  @apply rounded-[2rem];
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.app-background {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(143, 174, 203, 0.1), transparent 24%),
+    radial-gradient(circle at 85% 14%, rgba(143, 174, 203, 0.06), transparent 20%),
+    linear-gradient(180deg, var(--canvas) 0%, color-mix(in srgb, var(--canvas) 92%, #050607) 100%);
+}
+
+html[data-theme="light"] .app-background {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(41, 89, 129, 0.08), transparent 24%),
+    radial-gradient(circle at 85% 14%, rgba(41, 89, 129, 0.05), transparent 20%),
+    linear-gradient(180deg, #fbfbf8 0%, #f4f4f0 100%);
+}
+
+.app-grid {
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 1px, transparent 1px);
+  background-size: 112px 112px;
+  opacity: 0.28;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 96%);
+}
+
+html[data-theme="light"] .app-grid {
+  opacity: 0.45;
+}
+
+.logo-mark-shell {
+  border-color: var(--line-strong);
+  background: #000;
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="light"] .logo-mark-shell {
+  background: #fff;
+}
+
+html[data-theme="light"] .logo-for-dark {
+  display: none;
+}
+
+html[data-theme="light"] .logo-for-light {
+  display: block;
 }

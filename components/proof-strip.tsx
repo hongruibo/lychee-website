@@ -7,7 +7,7 @@ export function ProofStrip() {
         {proofChips.map((chip) => (
           <div
             key={chip}
-            className="proof-chip rounded-[999px] border border-black/8 bg-white/82 px-5 py-3 text-sm text-[color:var(--muted)] backdrop-blur-[6px]"
+            className="proof-chip rounded-[999px] border border-[color:var(--line)] bg-[color:var(--surface)] px-5 py-3 text-sm text-[color:var(--muted)] backdrop-blur-[6px]"
           >
             {chip}
           </div>

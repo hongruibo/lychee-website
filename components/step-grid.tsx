@@ -12,7 +12,7 @@ export function StepGrid() {
 
       <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {steps.map((item) => (
-          <article key={item.step} className="rounded-[1.75rem] border border-black/8 bg-white/78 p-6 backdrop-blur-[6px]">
+          <article key={item.step} className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6 backdrop-blur-[6px]">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
               {item.step}
             </p>

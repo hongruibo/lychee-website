@@ -10,7 +10,7 @@ export function CollaboratorCard({
   bio,
 }: CollaboratorCardProps) {
   return (
-    <article className="rounded-[1.75rem] border border-black/8 bg-white p-6">
+    <article className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
         {role}
       </p>

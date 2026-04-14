@@ -8,7 +8,7 @@ type FounderFeatureProps = {
 
 export function FounderFeature({ role, name, bio }: FounderFeatureProps) {
   return (
-    <article className="rounded-[2rem] border border-black/8 bg-white p-7 md:p-10">
+    <article className="rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-7 md:p-10">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
         {role}
       </p>

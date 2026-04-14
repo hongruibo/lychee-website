@@ -5,7 +5,7 @@ import { SectionIntro } from "./section-intro";
 export function ProblemSection() {
   return (
     <section className="section-frame problem-section">
-      <div className="section-shell grid gap-10 rounded-[2rem] border border-black/8 bg-white/78 px-6 py-10 backdrop-blur-[8px] md:px-10 md:py-12 lg:grid-cols-[1.02fr_0.98fr]">
+      <div className="section-shell grid gap-10 rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-10 backdrop-blur-[8px] md:px-10 md:py-12 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="section-copy space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--accent-strong)]">
             The problem
@@ -21,7 +21,7 @@ export function ProblemSection() {
           </p>
         </div>
 
-        <aside className="stat-callouts rounded-[2rem] border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(240,243,240,0.95))] p-6 md:p-8">
+        <aside className="stat-callouts rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-6 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
             Operating context
           </p>
@@ -32,7 +32,7 @@ export function ProblemSection() {
                 href={stat.href}
                 target="_blank"
                 rel="noreferrer"
-                className="stat-card rounded-[1.6rem] border border-white/70 bg-white/70 p-5 shadow-[0_8px_30px_rgba(15,23,42,0.04)] transition-colors duration-200 hover:border-[color:var(--accent-soft)]"
+                className="stat-card rounded-[1.6rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-5 shadow-[var(--shadow-soft)] transition-colors duration-200 hover:border-[color:var(--accent-soft)]"
               >
                 <span className="stat-value block text-3xl font-semibold tracking-[-0.05em] text-[color:var(--ink)] md:text-[2.4rem]">
                   {stat.value}
@@ -77,7 +77,7 @@ export function ProblemSection() {
             body: "Engineering time is lost reconstructing likely causes while scrap and delay continue to accumulate.",
           },
         ].map((card) => (
-          <article key={card.title} className="problem-card min-h-44 rounded-[1.7rem] border border-black/8 bg-white/80 p-6">
+          <article key={card.title} className="problem-card min-h-44 rounded-[1.7rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6">
             <h3 className="text-lg font-semibold tracking-[-0.03em] text-[color:var(--ink)]">
               {card.title}
             </h3>

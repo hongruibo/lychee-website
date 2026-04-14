@@ -29,7 +29,7 @@ export default function UseCasesPage() {
 
         <div className="mt-10 grid gap-5">
           {detailedUseCases.map((item) => (
-            <article key={item.title} className="grid gap-6 rounded-[2rem] border border-black/8 bg-white p-6 md:p-8 lg:grid-cols-[0.7fr_1.3fr]">
+            <article key={item.title} className="grid gap-6 rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6 md:p-8 lg:grid-cols-[0.7fr_1.3fr]">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
                   Use case
@@ -40,19 +40,19 @@ export default function UseCasesPage() {
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-black/8 bg-[color:var(--surface-alt)] p-5">
+                <div className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">What it is</p>
                   <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{item.what}</p>
                 </div>
-                <div className="rounded-[1.5rem] border border-black/8 bg-[color:var(--surface-alt)] p-5">
+                <div className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">Why it matters</p>
                   <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{item.why}</p>
                 </div>
-                <div className="rounded-[1.5rem] border border-black/8 bg-[color:var(--surface-alt)] p-5">
+                <div className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">Who owns it</p>
                   <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{item.owner}</p>
                 </div>
-                <div className="rounded-[1.5rem] border border-black/8 bg-[color:var(--surface-alt)] p-5">
+                <div className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)] p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">Operational consequence reduced</p>
                   <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{item.consequence}</p>
                 </div>
