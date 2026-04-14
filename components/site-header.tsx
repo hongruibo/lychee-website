@@ -12,9 +12,9 @@ export function SiteHeader() {
             href="/"
             className="brand-mark flex shrink-0 items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-[color:var(--ink)]"
           >
-            <span className="overflow-hidden rounded-full border border-black/8 bg-white shadow-[0_8px_20px_rgba(15,23,42,0.06)]">
+            <span className="overflow-hidden rounded-full border border-black/10 bg-black shadow-[0_8px_20px_rgba(15,23,42,0.12)]">
               <Image
-                src="/logo/logo-black-white.jpeg"
+                src="/logo/logo-white-black.jpeg"
                 alt="Lychee Labs logo"
                 width={34}
                 height={34}

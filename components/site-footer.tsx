@@ -14,9 +14,9 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-7xl px-6 pt-14 lg:px-10">
         <div className="footer-top border-b border-black/6 pb-8">
           <div className="flex items-center gap-4">
-            <span className="overflow-hidden rounded-full border border-black/8 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <span className="overflow-hidden rounded-full border border-black/10 bg-black shadow-[0_8px_24px_rgba(15,23,42,0.12)]">
               <Image
-                src="/logo/logo-black-white.jpeg"
+                src="/logo/logo-white-black.jpeg"
                 alt="Lychee Labs logo"
                 width={48}
                 height={48}
