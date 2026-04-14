@@ -11,11 +11,18 @@ function applyTheme(theme: Theme) {
     theme === "dark"
       ? "/logo/logo-white-black.jpeg"
       : "/logo/logo-black-white.jpeg";
+  const themeColor = theme === "dark" ? "#0b0f11" : "#f4f4f0";
 
   document
     .querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]')
     .forEach((node) => {
       node.href = iconHref;
+    });
+
+  document
+    .querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')
+    .forEach((node) => {
+      node.content = themeColor;
     });
 }
 
@@ -44,7 +51,7 @@ export function ThemeToggle() {
         applyTheme(updatedTheme);
         window.localStorage.setItem("lychee-theme", updatedTheme);
       }}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--line)] bg-[color:var(--surface-alt)] text-[color:var(--ink)] transition-colors duration-200 hover:border-[color:var(--line-strong)]"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--line)] bg-[color:var(--surface-alt)] text-[color:var(--ink)] transition-colors duration-200 hover:border-[color:var(--line-strong)] hover:bg-[color:var(--surface)]"
     >
       <span className="text-base" aria-hidden="true">
         {mounted && theme === "dark" ? "◐" : "◑"}

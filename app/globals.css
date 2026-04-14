@@ -49,11 +49,27 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+  background: var(--canvas);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+}
+
+:where(a, button, summary, input, textarea, select) {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, summary, input, textarea, select):focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 3px;
 }
 
 @media (pointer: fine) {
@@ -77,8 +93,31 @@ a {
   background: var(--accent-soft);
 }
 
+.site-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1380px;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .site-shell {
+    padding-inline: 2.5rem;
+  }
+}
+
 .section-frame {
-  @apply mx-auto w-full max-w-[1380px] px-6 py-10 lg:px-10 lg:py-14;
+  @apply py-10 lg:py-14;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1380px;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-frame {
+    padding-inline: 2.5rem;
+  }
 }
 
 .panel-shell {
@@ -131,4 +170,29 @@ html[data-theme="light"] .logo-for-dark {
 
 html[data-theme="light"] .logo-for-light {
   display: block;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1.5rem;
+  top: 1rem;
+  z-index: 1300;
+  transform: translateY(-200%);
+  border-radius: 9999px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-strong);
+  color: var(--ink);
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }

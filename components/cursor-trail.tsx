@@ -199,11 +199,15 @@ export function CursorTrail() {
         <img
           src="/logo/logo-white-black.jpeg"
           alt=""
+          width={32}
+          height={32}
           className="logo-for-dark h-full w-full object-cover"
         />
         <img
           src="/logo/logo-black-white.jpeg"
           alt=""
+          width={32}
+          height={32}
           className="logo-for-light absolute inset-0 hidden h-full w-full object-cover"
         />
       </div>
