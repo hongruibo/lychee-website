@@ -41,7 +41,6 @@ function createStreak(x: number, y: number, dx: number, dy: number, intensity = 
 
 export function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -51,12 +50,9 @@ export function CursorTrail() {
       return;
     }
 
-    document.documentElement.classList.add("cursor-effects-enabled");
-
     const canvas = canvasRef.current;
-    const cursor = cursorRef.current;
 
-    if (!canvas || !cursor) {
+    if (!canvas) {
       return;
     }
 
@@ -68,8 +64,6 @@ export function CursorTrail() {
 
     const streaks: Streak[] = [];
     const pointer = {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2,
       targetX: window.innerWidth / 2,
       targetY: window.innerHeight / 2,
       visible: false,
@@ -108,25 +102,28 @@ export function CursorTrail() {
           context.lineTo(streak.points[i].x, streak.points[i].y);
         }
 
-        context.strokeStyle = `rgba(208, 214, 224, ${0.26 * streak.life})`;
-        context.shadowColor = `rgba(255, 255, 255, ${0.16 * streak.life})`;
-        context.shadowBlur = 10;
+        context.strokeStyle = `rgba(208, 214, 224, ${0.12 * streak.life})`;
+        context.shadowColor = `rgba(208, 214, 224, ${0.08 * streak.life})`;
+        context.shadowBlur = 6;
         context.lineWidth = streak.width * streak.life;
         context.lineCap = "round";
         context.lineJoin = "round";
         context.stroke();
       });
 
-      pointer.x += (pointer.targetX - pointer.x) * 0.22;
-      pointer.y += (pointer.targetY - pointer.y) * 0.22;
-
-      cursor.style.transform = `translate3d(${pointer.x}px, ${pointer.y}px, 0) translate(-50%, -50%)`;
-      cursor.style.opacity = pointer.visible ? "1" : "0";
-
       rafId = window.requestAnimationFrame(draw);
     };
 
     const handlePointerMove = (event: PointerEvent) => {
+      const interactiveTarget = event.target instanceof Element
+        ? event.target.closest("a, button, summary, input, textarea, select, label")
+        : null;
+
+      if (interactiveTarget) {
+        pointer.visible = false;
+        return;
+      }
+
       const now = performance.now();
       const dx = event.clientX - pointer.targetX;
       const dy = event.clientY - pointer.targetY;
@@ -175,7 +172,6 @@ export function CursorTrail() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      document.documentElement.classList.remove("cursor-effects-enabled");
       window.cancelAnimationFrame(rafId);
       window.removeEventListener("resize", setCanvasSize);
       window.removeEventListener("pointermove", handlePointerMove);
@@ -185,32 +181,10 @@ export function CursorTrail() {
   }, []);
 
   return (
-    <>
-      <canvas
-        ref={canvasRef}
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-[1200] hidden md:block"
-      />
-      <div
-        ref={cursorRef}
-        aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-[1201] hidden h-8 w-8 overflow-hidden rounded-full border border-[color:var(--line-strong)] bg-black opacity-0 shadow-[0_8px_24px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
-      >
-        <img
-          src="/logo/logo-white-black.jpeg"
-          alt=""
-          width={32}
-          height={32}
-          className="logo-for-dark h-full w-full object-cover"
-        />
-        <img
-          src="/logo/logo-black-white.jpeg"
-          alt=""
-          width={32}
-          height={32}
-          className="logo-for-light absolute inset-0 hidden h-full w-full object-cover"
-        />
-      </div>
-    </>
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 z-[30] hidden md:block"
+    />
   );
 }

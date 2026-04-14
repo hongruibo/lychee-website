@@ -51,6 +51,7 @@ html {
   scroll-behavior: smooth;
   color-scheme: dark;
   background: var(--canvas);
+  overflow-x: hidden;
 }
 
 html[data-theme="light"] {
@@ -60,6 +61,7 @@ html[data-theme="light"] {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 :where(a, button, summary, input, textarea, select) {
@@ -70,19 +72,6 @@ body {
 :where(a, button, summary, input, textarea, select):focus-visible {
   outline: 2px solid var(--accent-strong);
   outline-offset: 3px;
-}
-
-@media (pointer: fine) {
-  .cursor-effects-enabled,
-  .cursor-effects-enabled body,
-  .cursor-effects-enabled a,
-  .cursor-effects-enabled button,
-  .cursor-effects-enabled summary,
-  .cursor-effects-enabled input,
-  .cursor-effects-enabled textarea,
-  .cursor-effects-enabled select {
-    cursor: none !important;
-  }
 }
 
 a {
