@@ -42,6 +42,8 @@ function createStreak(x: number, y: number, dx: number, dy: number, intensity = 
 export function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const cursorRef = useRef<HTMLDivElement | null>(null);
+  const strokeRgbRef = useRef("208 214 224");
+  const glowRgbRef = useRef("238 241 246");
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -79,6 +81,14 @@ export function CursorTrail() {
     let lastScrollY = window.scrollY;
     let lastMoveAt = 0;
 
+    const syncThemeColors = () => {
+      const styles = window.getComputedStyle(document.documentElement);
+      strokeRgbRef.current =
+        styles.getPropertyValue("--cursor-trail-rgb").trim() || "208 214 224";
+      glowRgbRef.current =
+        styles.getPropertyValue("--cursor-trail-glow-rgb").trim() || "238 241 246";
+    };
+
     const setCanvasSize = () => {
       const ratio = window.devicePixelRatio || 1;
       canvas.width = Math.floor(window.innerWidth * ratio);
@@ -106,8 +116,8 @@ export function CursorTrail() {
           context.lineTo(streak.points[i].x, streak.points[i].y);
         }
 
-        context.strokeStyle = `rgba(208, 214, 224, ${0.12 * streak.life})`;
-        context.shadowColor = `rgba(208, 214, 224, ${0.08 * streak.life})`;
+        context.strokeStyle = `rgba(${strokeRgbRef.current}, ${0.16 * streak.life})`;
+        context.shadowColor = `rgba(${glowRgbRef.current}, ${0.12 * streak.life})`;
         context.shadowBlur = 6;
         context.lineWidth = streak.width * streak.life;
         context.lineCap = "round";
@@ -171,8 +181,18 @@ export function CursorTrail() {
       }
     };
 
+    syncThemeColors();
     setCanvasSize();
     draw();
+
+    const themeObserver = new MutationObserver(() => {
+      syncThemeColors();
+    });
+
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     window.addEventListener("resize", setCanvasSize);
     window.addEventListener("pointermove", handlePointerMove, { passive: true });
@@ -180,6 +200,7 @@ export function CursorTrail() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
+      themeObserver.disconnect();
       window.cancelAnimationFrame(rafId);
       window.removeEventListener("resize", setCanvasSize);
       window.removeEventListener("pointermove", handlePointerMove);
@@ -198,7 +219,11 @@ export function CursorTrail() {
       <div
         ref={cursorRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-[41] hidden h-[18px] w-[18px] overflow-hidden rounded-full border border-white/10 bg-black/88 opacity-0 shadow-[0_4px_12px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[41] hidden h-[18px] w-[18px] overflow-hidden rounded-full opacity-0 shadow-[0_4px_12px_rgba(15,23,42,0.18)] transition-opacity duration-150 md:block"
+        style={{
+          border: "1px solid var(--cursor-chip-border)",
+          background: "var(--cursor-chip-bg)",
+        }}
       >
         <img
           src="/logo/logo-white-black.jpeg"

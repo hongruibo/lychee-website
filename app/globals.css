@@ -16,6 +16,10 @@
   --line-subtle: rgba(255, 255, 255, 0.06);
   --shadow-soft: 0 20px 70px rgba(0, 0, 0, 0.28);
   --shadow-strong: 0 30px 90px rgba(0, 0, 0, 0.34);
+  --cursor-trail-rgb: 208 214 224;
+  --cursor-trail-glow-rgb: 238 241 246;
+  --cursor-chip-bg: rgba(0, 0, 0, 0.88);
+  --cursor-chip-border: rgba(255, 255, 255, 0.12);
   --font-sans: "SF Pro Display", "Avenir Next", Aptos, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 }
@@ -36,6 +40,10 @@ html[data-theme="light"] {
   --line-subtle: rgba(16, 21, 22, 0.05);
   --shadow-soft: 0 20px 70px rgba(15, 23, 42, 0.06);
   --shadow-strong: 0 30px 90px rgba(15, 23, 42, 0.08);
+  --cursor-trail-rgb: 114 121 132;
+  --cursor-trail-glow-rgb: 151 158 168;
+  --cursor-chip-bg: rgba(255, 255, 255, 0.92);
+  --cursor-chip-border: rgba(16, 21, 22, 0.12);
 }
 
 @theme inline {
