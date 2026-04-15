@@ -5,7 +5,7 @@ import { calendlyUrl } from "@/lib/site";
 export function HeroSection() {
   return (
     <section className="section-frame hero-section pt-10 md:pt-16">
-      <div className="space-y-10 rounded-[2.25rem] border border-[color:var(--line-strong)] bg-[color:var(--surface)] px-6 py-16 shadow-[var(--shadow-soft)] backdrop-blur-[8px] md:px-10 md:py-24">
+      <div className="rounded-[2.25rem] border border-[color:var(--line-strong)] bg-[color:var(--surface)] px-6 py-16 shadow-[var(--shadow-soft)] backdrop-blur-[8px] md:px-10 md:py-24">
         <div className="hero-inner mx-auto max-w-[820px] space-y-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--accent-strong)]">
             Industrial intelligence for mission-critical manufacturing
@@ -26,7 +26,7 @@ export function HeroSection() {
               rel="noreferrer"
               className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
             >
-              Book a pilot intro
+              Scope A Pilot
             </a>
             <Link
               href="/use-cases"
@@ -34,25 +34,6 @@ export function HeroSection() {
             >
               See use cases
             </Link>
-          </div>
-        </div>
-
-        <div className="hero-visual relative mx-auto min-h-[24rem] w-full max-w-[1120px] overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(53,91,129,0.08),transparent_22%),radial-gradient(circle_at_80%_25%,rgba(41,89,129,0.08),transparent_20%),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:auto,auto,92px_92px,92px_92px]" />
-
-          <div className="absolute inset-x-6 inset-y-6 md:inset-x-8 md:inset-y-8">
-            <div className="relative h-full overflow-hidden rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface-soft)]">
-              <div className="absolute inset-x-8 top-1/2 h-px -translate-y-1/2 bg-[linear-gradient(90deg,rgba(15,23,42,0.05),rgba(41,89,129,0.28),rgba(15,23,42,0.05))]" />
-              <div className="absolute left-[10%] top-[22%] h-16 w-16 rounded-full border border-[color:var(--accent-soft)] bg-[color:var(--surface-alt)] shadow-[var(--shadow-soft)]" />
-              <div className="absolute left-[29%] top-[43%] h-10 w-10 rounded-full border border-[color:var(--accent-soft)] bg-[color:var(--surface-alt)]" />
-              <div className="absolute left-[45%] top-[20%] h-24 w-24 rounded-full border border-[color:var(--accent-soft)] bg-[color:var(--surface-alt)]" />
-              <div className="absolute right-[28%] top-[48%] h-12 w-12 rounded-full border border-[color:var(--accent-soft)] bg-[color:var(--surface-alt)]" />
-              <div className="absolute right-[10%] top-[26%] h-20 w-20 rounded-full border border-[color:var(--accent)] bg-[color:var(--accent)]/10 shadow-[0_10px_35px_rgba(41,89,129,0.08)]" />
-
-              <div className="absolute left-[14%] top-[28%] h-px w-[20%] rotate-[14deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.35))]" />
-              <div className="absolute left-[36%] top-[43%] h-px w-[18%] -rotate-[18deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.3))]" />
-              <div className="absolute left-[52%] top-[40%] h-px w-[22%] rotate-[12deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.32))]" />
-            </div>
           </div>
         </div>
       </div>
