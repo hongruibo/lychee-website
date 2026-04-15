@@ -72,6 +72,20 @@ body {
   overflow-x: hidden;
 }
 
+@media (pointer: fine) {
+  .cursor-effects-enabled,
+  .cursor-effects-enabled body,
+  .cursor-effects-enabled a,
+  .cursor-effects-enabled button,
+  .cursor-effects-enabled summary,
+  .cursor-effects-enabled input,
+  .cursor-effects-enabled textarea,
+  .cursor-effects-enabled select,
+  .cursor-effects-enabled label {
+    cursor: none !important;
+  }
+}
+
 :where(a, button, summary, input, textarea, select) {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;

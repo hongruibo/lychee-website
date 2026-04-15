@@ -53,6 +53,8 @@ export function CursorTrail() {
       return;
     }
 
+    document.documentElement.classList.add("cursor-effects-enabled");
+
     const canvas = canvasRef.current;
     const cursor = cursorRef.current;
 
@@ -125,19 +127,15 @@ export function CursorTrail() {
         context.stroke();
       });
 
-      pointer.x += (pointer.targetX - pointer.x) * 0.18;
-      pointer.y += (pointer.targetY - pointer.y) * 0.18;
-      cursor.style.transform = `translate3d(${pointer.x + 14}px, ${pointer.y + 10}px, 0) translate(-50%, -50%)`;
+      pointer.x += (pointer.targetX - pointer.x) * 0.3;
+      pointer.y += (pointer.targetY - pointer.y) * 0.3;
+      cursor.style.transform = `translate3d(${pointer.x}px, ${pointer.y}px, 0) translate(-50%, -50%)`;
       cursor.style.opacity = pointer.visible ? "0.92" : "0";
 
       rafId = window.requestAnimationFrame(draw);
     };
 
     const handlePointerMove = (event: PointerEvent) => {
-      const interactiveTarget = event.target instanceof Element
-        ? event.target.closest("a, button, summary, input, textarea, select, label")
-        : null;
-
       const now = performance.now();
       const dx = event.clientX - pointer.targetX;
       const dy = event.clientY - pointer.targetY;
@@ -146,11 +144,7 @@ export function CursorTrail() {
       pointer.vy = dy;
       pointer.targetX = event.clientX;
       pointer.targetY = event.clientY;
-      pointer.visible = !interactiveTarget;
-
-      if (interactiveTarget) {
-        return;
-      }
+      pointer.visible = true;
 
       if (now - lastMoveAt > 12) {
         streaks.push(createStreak(event.clientX, event.clientY, dx, dy));
@@ -200,6 +194,7 @@ export function CursorTrail() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
+      document.documentElement.classList.remove("cursor-effects-enabled");
       themeObserver.disconnect();
       window.cancelAnimationFrame(rafId);
       window.removeEventListener("resize", setCanvasSize);
