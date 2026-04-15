@@ -95,6 +95,40 @@ export const whyNowStats = [
   },
 ];
 
+export const pilotMotionCards = [
+  {
+    title: "First pilot scope",
+    body: "Start with one line, one defect family, and one operating KPI tied to scrap, yield, or diagnosis speed.",
+  },
+  {
+    title: "Minimum viable data",
+    body: "Typical inputs include historian or equipment data, batch or lot context, QC results, and the practical notes teams already keep.",
+  },
+  {
+    title: "Typical pilot window",
+    body: "Run an initial pilot over a defined operating window in weeks, not a long systems program before value can be evaluated.",
+  },
+  {
+    title: "What teams get back",
+    body: "Ranked risk signals, likely upstream drivers, and intervention priorities for engineering and production teams.",
+  },
+];
+
+export const plantFitCards = [
+  {
+    title: "Fits around MES, SPC, inspection, and QMS",
+    body: "Lychee Labs is not a rip-and-replace system. It sits across existing plant systems to make delayed process and quality signals more actionable.",
+  },
+  {
+    title: "Built for ugly plant data",
+    body: "Battery plants do not have pristine data. The product is designed for fragmented, incomplete, and uneven industrial history across tools and teams.",
+  },
+  {
+    title: "Product-first deployment",
+    body: "The goal is software that can be piloted and expanded with a defined scope, not a consulting-heavy science project disguised as a platform.",
+  },
+];
+
 export const steps = [
   {
     step: "01",

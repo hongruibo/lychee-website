@@ -11,7 +11,7 @@ export function HeroSection() {
             Industrial intelligence for mission-critical manufacturing
           </p>
           <h1 className="mx-auto max-w-4xl text-balance text-[3.5rem] font-semibold tracking-[-0.065em] text-[color:var(--ink)] md:text-[5rem]">
-            Catch battery manufacturing defects before scrap compounds
+            Reduce battery manufacturing defects before scrap compounds
           </h1>
           <p className="mx-auto max-w-[760px] text-pretty text-[1.15rem] leading-8 text-[color:var(--muted)] md:text-[1.35rem]">
             Lychee Labs helps battery manufacturing teams detect elevated defect risk earlier - so they can reduce scrap, accelerate root-cause investigation, and recover yield before more revenue is lost.

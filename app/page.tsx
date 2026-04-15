@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { EconomicImpactSection } from "@/components/economic-impact-section";
 import { HeroSection } from "@/components/hero-section";
+import { PilotReadinessSection } from "@/components/pilot-readiness-section";
 import { ProblemSection } from "@/components/problem-section";
 import { ProofStrip } from "@/components/proof-strip";
 import { SectionIntro } from "@/components/section-intro";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <ProofStrip />
       <ProblemSection />
       <WhyNowSection />
+      <PilotReadinessSection />
       <StepGrid />
       <UseCaseCards />
 
