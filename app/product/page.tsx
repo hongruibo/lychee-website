@@ -84,7 +84,7 @@ export default function ProductPage() {
       <CTASection
         title="Earlier risk visibility is most valuable when the line is expensive to stabilize."
         body="If you are working on yield, quality, or root-cause speed in battery manufacturing, Lychee Labs is built for that operating problem."
-        ctaLabel="Book an intro"
+        ctaLabel="Scope A Pilot"
         ctaHref="/contact"
       />
     </>

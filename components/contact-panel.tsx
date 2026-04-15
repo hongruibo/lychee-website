@@ -31,7 +31,7 @@ export function ContactPanel({
         <div className="grid gap-4">
           {[
             {
-              title: "Book an intro",
+              title: "Scope A Pilot",
               detail: "Reserve time for an introductory conversation.",
               href: calendlyUrl,
             },

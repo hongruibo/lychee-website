@@ -55,7 +55,7 @@ export function SiteFooter() {
                 rel="noreferrer"
                 className="w-fit transition-colors duration-200 hover:text-[color:var(--ink)]"
               >
-                Book an intro
+                Scope A Pilot
               </a>
               <a
                 href={companyLinkedInUrl}

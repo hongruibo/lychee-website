@@ -39,7 +39,7 @@ export function SiteHeader() {
                 rel="noreferrer"
                 className="cta-primary inline-flex items-center rounded-full border border-[color:var(--line)] bg-[color:var(--ink)] px-4 py-2.5 text-[13px] font-medium text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5 hover:opacity-96"
               >
-                Book an intro
+                Scope A Pilot
               </a>
             </div>
 
@@ -67,7 +67,7 @@ export function SiteHeader() {
                     rel="noreferrer"
                     className="mt-2 inline-flex items-center justify-center rounded-full bg-[color:var(--ink)] px-4 py-3 text-sm font-medium text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
                   >
-                    Book an intro
+                    Scope A Pilot
                   </a>
                 </nav>
               </div>

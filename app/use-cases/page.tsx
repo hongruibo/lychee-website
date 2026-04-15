@@ -65,7 +65,7 @@ export default function UseCasesPage() {
       <CTASection
         title="These workflows are built for battery manufacturing teams where delayed visibility is expensive."
         body="The same operating logic matters wherever fragmented process and quality data slow diagnosis, stabilization, and recovery."
-        ctaLabel="Book an intro"
+        ctaLabel="Scope A Pilot"
         ctaHref="/contact"
       />
     </>

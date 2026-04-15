@@ -90,7 +90,7 @@ export default function HomePage() {
       <CTASection
         title="Working on battery yield, scrap, or diagnosis speed? Let’s scope a pilot."
         body="For pilot discussions, technical introductions, and customer conversations."
-        ctaLabel="Book an intro"
+        ctaLabel="Scope A Pilot"
         ctaHref="/contact"
       />
     </>
