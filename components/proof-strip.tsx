@@ -1,16 +1,21 @@
-import { proofChips } from "@/lib/site";
+import { heroValueCards } from "@/lib/site";
 
 export function ProofStrip() {
   return (
     <section className="section-frame">
-      <div className="proof-grid grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-        {proofChips.map((chip) => (
-          <div
-            key={chip}
-            className="proof-chip rounded-[999px] border border-[color:var(--line)] bg-[color:var(--surface)] px-5 py-3 text-sm text-[color:var(--muted)] backdrop-blur-[6px]"
+      <div className="proof-grid grid gap-4 md:grid-cols-3">
+        {heroValueCards.map((card) => (
+          <article
+            key={card.title}
+            className="rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6 backdrop-blur-[6px]"
           >
-            {chip}
-          </div>
+            <h3 className="text-lg font-semibold tracking-[-0.03em] text-[color:var(--ink)]">
+              {card.title}
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">
+              {card.body}
+            </p>
+          </article>
         ))}
       </div>
     </section>

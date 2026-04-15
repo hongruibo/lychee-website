@@ -18,11 +18,19 @@ export const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const proofChips = [
-  "Built for mission-critical manufacturing environments",
-  "Built for battery manufacturing, with broader energy relevance",
-  "Focused on earlier defect visibility and faster diagnosis",
-  "Designed for fragmented industrial data",
+export const heroValueCards = [
+  {
+    title: "Earlier defect visibility",
+    body: "Surface elevated risk before downstream confirmation makes the loss larger.",
+  },
+  {
+    title: "Faster diagnosis",
+    body: "Narrow the search space around likely upstream drivers sooner.",
+  },
+  {
+    title: "Lower loss",
+    body: "Reduce scrap, rework, lost output, and diagnostic delay.",
+  },
 ];
 
 export const economicStats = [

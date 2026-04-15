@@ -39,11 +39,8 @@ export function HeroSection() {
 
         <div className="hero-visual relative mx-auto min-h-[24rem] w-full max-w-[1120px] overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-alt)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(53,91,129,0.08),transparent_22%),radial-gradient(circle_at_80%_25%,rgba(41,89,129,0.08),transparent_20%),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:auto,auto,92px_92px,92px_92px]" />
-          <div className="absolute left-6 top-6 rounded-full border border-[color:var(--line)] bg-[color:var(--surface-alt)] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)] md:left-8 md:top-8">
-            Battery manufacturing
-          </div>
 
-          <div className="absolute inset-x-6 bottom-6 top-20 md:inset-x-8 md:bottom-8 md:top-24">
+          <div className="absolute inset-x-6 inset-y-6 md:inset-x-8 md:inset-y-8">
             <div className="relative h-full overflow-hidden rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface-soft)]">
               <div className="absolute inset-x-8 top-1/2 h-px -translate-y-1/2 bg-[linear-gradient(90deg,rgba(15,23,42,0.05),rgba(41,89,129,0.28),rgba(15,23,42,0.05))]" />
               <div className="absolute left-[10%] top-[22%] h-16 w-16 rounded-full border border-[color:var(--accent-soft)] bg-[color:var(--surface-alt)] shadow-[var(--shadow-soft)]" />
@@ -55,21 +52,6 @@ export function HeroSection() {
               <div className="absolute left-[14%] top-[28%] h-px w-[20%] rotate-[14deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.35))]" />
               <div className="absolute left-[36%] top-[43%] h-px w-[18%] -rotate-[18deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.3))]" />
               <div className="absolute left-[52%] top-[40%] h-px w-[22%] rotate-[12deg] bg-[linear-gradient(90deg,rgba(41,89,129,0.1),rgba(41,89,129,0.32))]" />
-
-              <div className="absolute bottom-5 left-5 right-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                {[
-                  "Process context",
-                  "Upstream-to-downstream traceability",
-                  "Connected signals",
-                  "Unified process history",
-                  "Quality outcomes",
-                  "Earlier action, lower loss",
-                ].map((label) => (
-                  <div key={label} className="rounded-[1.25rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-4 py-4">
-                    <p className="text-sm font-medium text-[color:var(--ink)]">{label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
