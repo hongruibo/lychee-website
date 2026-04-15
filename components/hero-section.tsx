@@ -11,10 +11,10 @@ export function HeroSection() {
             Industrial intelligence for mission-critical manufacturing
           </p>
           <h1 className="mx-auto max-w-4xl text-balance text-[3.5rem] font-semibold tracking-[-0.065em] text-[color:var(--ink)] md:text-[5rem]">
-            Early-warning software for battery manufacturing
+            Catch battery manufacturing defects before scrap compounds
           </h1>
           <p className="mx-auto max-w-[760px] text-pretty text-[1.15rem] leading-8 text-[color:var(--muted)] md:text-[1.35rem]">
-            Lychee Labs helps battery manufacturing teams predict defect risk earlier and accelerate root-cause investigation - increasing yield, throughput, and revenue.
+            Lychee Labs helps battery manufacturing teams detect elevated defect risk earlier - so they can reduce scrap, accelerate root-cause investigation, and recover yield before more revenue is lost.
           </p>
           <p className="mx-auto max-w-[720px] text-pretty text-base leading-7 text-[color:var(--muted)] md:text-lg">
             Built for battery manufacturing environments where delayed discovery can destroy millions in value before the root cause is clear.
@@ -26,7 +26,7 @@ export function HeroSection() {
               rel="noreferrer"
               className="inline-flex items-center rounded-full bg-[color:var(--ink)] px-5 py-3 text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--canvas)] transition-transform duration-200 hover:-translate-y-0.5"
             >
-              Book an intro
+              Book a pilot intro
             </a>
             <Link
               href="/use-cases"

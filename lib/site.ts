@@ -21,15 +21,38 @@ export const navLinks = [
 export const heroValueCards = [
   {
     title: "Earlier defect visibility",
-    body: "Surface elevated risk before downstream confirmation makes the loss larger.",
+    body: "Surface elevated risk before downstream confirmation turns drift into more scrap.",
   },
   {
-    title: "Faster diagnosis",
-    body: "Narrow the search space around likely upstream drivers sooner.",
+    title: "Faster root-cause loops",
+    body: "Shorten the path from observed quality issues to likely upstream drivers.",
   },
   {
-    title: "Lower loss",
-    body: "Reduce scrap, rework, lost output, and diagnostic delay.",
+    title: "Higher-value intervention",
+    body: "Help teams act while lots are still recoverable, not after value is already lost.",
+  },
+];
+
+export const economicImpactStats = [
+  {
+    value: "70-80%",
+    title: "Early-ramp scrap",
+    body: "Hazardous waste and lost value can reach this level in early battery-factory ramp-up.",
+  },
+  {
+    value: "3 wks",
+    title: "Cycle-time delay",
+    body: "Formation and aging mean defects are often recognized only after weeks of added time and value.",
+  },
+  {
+    value: "32%",
+    title: "Cell-cost impact",
+    body: "Battery quality failures do not just hit inspection. They hit a large share of total cell cost.",
+  },
+  {
+    value: "~€10M/yr",
+    title: "Per 1-point gain",
+    body: "At 40 GWh/year scale, even a 1-point improvement can be worth about this much annually.",
   },
 ];
 
@@ -51,6 +74,24 @@ export const economicStats = [
     label: "Potential annual value of a 1% yield improvement at 20 GWh scale.",
     href: "https://www.bindt.org/News/march-2023/waygate-technologies-and-its-partners-among-winners-of-faraday-battery-challenge-funding-competition-in-the-united-kingdom/?utm_source=chatgpt.com",
     source: "BINDT / UKRI",
+  },
+];
+
+export const whyNowStats = [
+  {
+    value: "$108/kWh",
+    title: "Global average pack price",
+    meta: "2025",
+  },
+  {
+    value: "$84/kWh",
+    title: "Average in China",
+    meta: "2025",
+  },
+  {
+    value: "95%",
+    title: "Yield potential for leaders",
+    meta: "With manufacturing improvements by 2035",
   },
 ];
 

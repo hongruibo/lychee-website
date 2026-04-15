@@ -1,20 +1,24 @@
 import Link from "next/link";
 
 import { CTASection } from "@/components/cta-section";
+import { EconomicImpactSection } from "@/components/economic-impact-section";
 import { HeroSection } from "@/components/hero-section";
 import { ProblemSection } from "@/components/problem-section";
 import { ProofStrip } from "@/components/proof-strip";
 import { SectionIntro } from "@/components/section-intro";
 import { StepGrid } from "@/components/step-grid";
 import { UseCaseCards } from "@/components/use-case-cards";
+import { WhyNowSection } from "@/components/why-now-section";
 import { aboutPreview, founderName, founderPreview, linkedInUrl, teamRoles, whyLychee } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <EconomicImpactSection />
       <ProofStrip />
       <ProblemSection />
+      <WhyNowSection />
       <StepGrid />
       <UseCaseCards />
 
